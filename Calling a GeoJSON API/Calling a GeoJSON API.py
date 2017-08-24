@@ -24,7 +24,7 @@ while True:
     #urllib library has diffrent method in Python 3.x - see above (added "parse" in the middle)
     print ("Retrieving"), url
     open_url = urllib.request.urlopen(url)
-    data = open_url.read()
+    data = open_url.read().decode("utf8")
     print ("Retrieved", len(data), "characters")
 
     js = json.loads(data)
